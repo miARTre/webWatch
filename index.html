@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prodaja satova</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Dobrodošli u našu prodavnicu satova!</h1>
+    </div>
+  </header>
+  
+  <section id="products">
+    <div class="container">
+      <h2>Naša ponuda</h2>
+      <div class="product">
+        <img src="images/slika1.png" alt="Sat 1">
+        <h3>Rolex DAY‑DATE 36</h3>
+        <p>Cijena: $35,000.00</p>
+        <br>
+        <button onclick="addToCart(1)">Dodaj u korpu</button>
+      </div>
+      
+      <div class="product">
+        <img src="images/slika2.png" alt="Sat 2">
+        <h3>Rolex Datejust 41 Blue Fluted Dial Jubilee Men's Watch</h3>
+        <p>Cijena: $19,995.00</p>
+        <br>
+        <button onclick="addToCart(2)">Dodaj u korpu</button>
+      </div>
+
+      <div class="product">
+        <img src="images/slika3.png" alt="Sat 3">
+        <h3>Patek Philippe Nautilus</h3>
+        <p>Cijena: $63,000.00</p>
+        <br>
+        <button onclick="addToCart(3)">Dodaj u korpu</button>
+      </div>
+      
+      <!-- Dodajte ostale proizvode ovdje -->
+    </div>
+  </section>
+  
+  <section id="cart">
+    <div class="container">
+      <h2>Korpa</h2>
+      <ul id="cart-items">
+        <!-- Ovde će se prikazivati proizvodi u korpi -->
+      </ul>
+      <p id="total">Ukupno: $0</p>
+      <button onclick="checkout()">Naruči</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Kontaktirajte nas</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <div>
+          <label for="name">Ime:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Poruka:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div>
+          <label for="subscribe">Pretplata:</label>
+          <input type="checkbox" id="subscribe" name="subscribe" required>
+        </div>
+        <div>
+          <label for="gender">Pol:</label>
+          <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Muški</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Ženski</label>
+          </div>
+        </div>
+        <div>
+          <label for="country">Država:</label>
+          <select id="country" name="country" required>
+            <option value="">Izaberite državu</option>
+            <option value="bosnia">Bosna i Hercegovina</option>
+            <option value="serbia">Srbija</option>
+            <option value="croatia">Hrvatska</option>
+          </select>
+        </div>
+        <div>
+          <input type="submit" value="Pošalji">
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
